@@ -2,5 +2,6 @@
 
 def multiple_returns(sentence):
     length = len(sentence)
+    # checking empty sentence
     first = sentence[0] if sentence else 0
     return length, first
