@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    return[num2**2 for num in matrix for num2 in num]
+   return [[x ** 2 for x in row] for row in matrix]
