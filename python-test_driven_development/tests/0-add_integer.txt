@@ -10,19 +10,12 @@ First import the function:
 3
 >>> add_integer(100, -2)
 98
-Addition with negative number:
 >>> add_integer(100, -2)
 98
-
-Using default value for b (98):
 >>> add_integer(2)
 100
-
-Addition with float (gets converted to int):
 >>> add_integer(100.3, -2)
 98
-
-Test with string - should raise TypeError:
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 ...
