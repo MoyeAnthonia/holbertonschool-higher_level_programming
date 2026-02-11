@@ -29,7 +29,10 @@ def matrix_divided(matrix, div):
                 raise TypeError("div must be a number")
             if div == 0:
                 raise ZeroDivisionError('division by zero')
-    print(round(item2 / div, 2), 'finail result')
+    # print(round(item2 / div, 2), 'finail result')
     
-    print(round(item2 / div, 2), 'finail result')
-    return round(item2 / div, 2)
+    result = round(item2 / div, 2)
+    matrix.clear()
+    matrix.append(result)
+    # print([matrix],"new list")
+    return [matrix]
