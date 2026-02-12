@@ -6,3 +6,13 @@ Using ``text_indentation``
 First import the function:
 
     >>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("")
+>>> text_indentation("lorem ipsum:")
+lorem ipsum:
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("Lorem ipsum:yes")
+Lorem ipsum:
+yes
