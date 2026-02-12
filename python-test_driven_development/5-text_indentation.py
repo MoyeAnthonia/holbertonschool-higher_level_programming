@@ -22,7 +22,16 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    for char in text:
+    skip_space = False
+
+    for idx, char in enumerate(text):
+        if skip_space and char == " ":
+            continue
+
+        skip_space = False
         print(char, end="")
+
         if char in ".?:":
-            print()
+            if idx != len(text) - 1:
+                print("\n")
+                skip_space = True
