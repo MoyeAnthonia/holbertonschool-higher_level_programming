@@ -2,7 +2,7 @@
 """a base class that inherits from super class"""
 
 
-def MyList(list):
+class MyList(list):
     """atrributes are not needed"""
 
     def print_sorted(self):
