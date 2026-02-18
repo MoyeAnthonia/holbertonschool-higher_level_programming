@@ -10,7 +10,7 @@ class Square(Rectangle):
         self.___size = size
         self.integer_validator("size", size)
         super().__init__(size, size)
-    
+
     def __str__(self):
         """inherit methods"""
         return "[Square] {}/{}".format(self._Rectangle__width, self.
