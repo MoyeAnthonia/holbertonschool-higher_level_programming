@@ -2,41 +2,39 @@
 """CountedIterator class that counts iterated items"""
 
 
-class Fish:
-    """Iterator wrapper that counts fetched items"""
-
+class Fish():
+    """
+    This is the Fish class
+    """
     def swim(self):
-        """print(the iterator object itself"""
         print("The fish is swimming")
 
     def habitat(self):
-        """print(next item and increment counter"""
         print("The fish lives in water")
 
 
-class Bird:
-    """Iterator wrapper that counts fetched items"""
-
+class Bird():
+    """
+    This is the Bird class
+    """
     def fly(self):
-        """print(the iterator object itself"""
         print("The bird is flying")
 
     def habitat(self):
-        """print(next item and increment counter"""
-        print("The bird lives in sky")
+        print("The bird lives in the sky")
 
 
-class FlyingFish(Fish, Bird):
-    """inherited class"""
+class FlyingFish(Bird, Fish):
+    """
+    This is the FlyingFish class
 
+    Inherits: Bird and Fish
+    """
     def fly(self):
-        """print(the iterator object itself"""
-        print("The flying fish is soaring")
+        print("The flying fish is soaring!")
 
     def swim(self):
-        """print(the iterator object itself"""
-        print("The flying fish is swimming")
+        print("The flying fish is swimming!")
 
     def habitat(self):
-        """print(the iterator object itself"""
-        print("The flying fish lives in both water and the sky")
+        print("The flying fish lives both in water and the sky!")
