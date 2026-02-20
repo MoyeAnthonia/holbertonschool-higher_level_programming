@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from abc import ABC, abstractmethod
+import math
 """Creating an abstract class"""
 
 
@@ -26,12 +27,12 @@ class Circle(Shape):
 
     def area(self):
         """call the parent method"""
-        A = 3.14 * (self.radius ** 2)
+        A = math.pi * (self.radius ** 2)
         return A
 
     def perimeter(self):
         """call the parent method"""
-        C = 3.14 * (self.radius ** 2)
+        C = math.pi * (self.radius ** 2)
         return C
 
 
