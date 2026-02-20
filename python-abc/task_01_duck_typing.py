@@ -4,16 +4,21 @@ from abc import ABC, abstractmethod
 
 
 class Shape(ABC):
+    """Abstract class method"""
+
     @abstractmethod
     def area(self):
         """Empty sound method"""
         pass
+
     @abstractmethod
     def perimeter(self):
         """Empty sound method"""
         pass
 
+
 class Circle(Shape):
+    """Rep circle class"""
     def __init__(self, radius):
         """insantitied"""
         super().__init__()
@@ -29,7 +34,10 @@ class Circle(Shape):
         C = 3.14 * (self.radius ** 2)
         return C
 
+
 class Rectangle(Shape):
+    """Rep rectangle class"""
+
     def __init__(self, width, height):
         """insantitied"""
         super().__init__()
@@ -45,6 +53,7 @@ class Rectangle(Shape):
         """call the parent method"""
         P = 2 * (self.width + self.height)
         return P
+
 
 def shape_info(entity):
     """Duck typing function example"""
