@@ -16,8 +16,11 @@ class VerboseList (list):
 
     def remove(self, item):
         """call the parent method"""
-        super().remove(item)
-        print(f"Removed [{item}] from the list.")
+        if item in self:
+            print(f"Removed [{item}] from the list.")
+            super().remove(item)
+        else:
+            print(f"Item [{item}] not found in the list.")
 
     def pop(self, item=-1):
         """call the parent method"""
