@@ -27,13 +27,11 @@ class Circle(Shape):
 
     def area(self):
         """call the parent method"""
-        A = math.pi * (self.radius ** 2)
-        return A
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         """call the parent method"""
-        C = math.pi * (self.radius ** 2)
-        return C
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
@@ -47,13 +45,11 @@ class Rectangle(Shape):
 
     def area(self):
         """call the parent method"""
-        A = self.width * self.height
-        return A
+        return self.width * self.height
 
     def perimeter(self):
         """call the parent method"""
-        P = 2 * (self.width + self.height)
-        return P
+        return 2 * (self.width + self.height)
 
 
 def shape_info(entity):
