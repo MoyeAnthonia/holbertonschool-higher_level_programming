@@ -19,7 +19,7 @@ class VerboseList (list):
         super().remove(item)
         print(f"Removed [{item}] from the list.")
 
-    def pop(self, item):
+    def pop(self, item=-1):
         """call the parent method"""
+        print(f"Popped [{self[item]}] from the list.")
         super().pop(item)
-        print(f"Popped [{item}] from the list.")
