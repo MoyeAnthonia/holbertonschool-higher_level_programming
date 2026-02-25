@@ -13,7 +13,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
 
-            response_message = "Hello, this is a simple API!"
+            response_message = b"Hello, this is a simple API!"
             self.wfile.write(response_message.encode("utf-8"))
         elif self.path == "/data":
             data = {
@@ -31,7 +31,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
 
-            response_message = "OK"
+            response_message = b"OK"
             self.wfile.write(response_message)
         else:
             self.send_response(404)
