@@ -13,8 +13,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
 
-            response_message = b"Hello, this is a simple API!"
-            self.wfile.write(response_message.encode("utf-8"))
+            self.wfile.write(b"Hello, this is a simple API!")
         elif self.path == "/data":
             data = {
                 "name": "John",
@@ -36,7 +35,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         else:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(b"404 Not Found")
+            self.wfile.write(b"Not Found")
 
 def run():
     server_address = ('', PORT)
