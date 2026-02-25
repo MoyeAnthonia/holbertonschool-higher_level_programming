@@ -34,6 +34,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(response_message)
         else:
             self.send_response(404)
+            self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Not Found")
 
