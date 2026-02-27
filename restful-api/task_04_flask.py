@@ -5,12 +5,7 @@ py -m venv .venv
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-users = {
-    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"},
-    "mary": {"username": "mary", "name": "Mary", "age": 24, "city": "Melbourne"},
-    "felix": {"username": "felix", "name": "Felix", "age": 42, "city": "Sydney"}
-    }
+users = {}
 @app.route("/")
 def home():
     return "Welcome to the Flask API!"
