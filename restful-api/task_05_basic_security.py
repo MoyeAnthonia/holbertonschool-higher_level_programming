@@ -18,6 +18,13 @@ def verify_password(username, password):
         return users[username]
     return None
 
+# handling error
+@auth.error_handler
+def unauthorized():
+    return jsonify({
+        "error": "Unauthorized"
+    }), 401
+    
 # Required Endpoint
 @app.route("/basic-protected", methods=["GET"])
 @auth.login_required
