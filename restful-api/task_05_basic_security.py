@@ -59,7 +59,7 @@ def jwt_protected():
     current_user = get_jwt_identity()
     if not current_user:
         return jsonify({"message": "Unauthorized"}), 401
-    return jsonify("JWT Auth: Access Granted"), 200
+    return "JWT Auth: Access Granted", 200
 
 @jwt.invalid_token_loader
 def handle_invalid_token(err):
