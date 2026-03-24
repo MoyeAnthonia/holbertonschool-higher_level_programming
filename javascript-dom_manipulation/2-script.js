@@ -5,4 +5,3 @@ const header = document.querySelector("header");
 redHeader.addEventListener("click", () => {
   header.classList.add("red");
 });
-
