@@ -4,6 +4,11 @@ const twoArgs = process.argv.slice(3);
 const [firstArg] = oneArgs;
 const [secondArg] = twoArgs;
 
-const newString = firstArg.concat(' is ', secondArg);
+const newString = firstArg.concat(" is ", secondArg);
 
-console.log(newString);
+
+if (newString === undefined) {
+  console.log("No argument");
+} else {
+  console.log(newString);
+}
