@@ -1,9 +1,9 @@
 #!/usr/bin/node
-const args = process.argv.slice(2);
-const [firstArg] = args;
+const oneArgs = process.argv.slice(2);
+const twoArgs = process.argv.slice(3);
+const [firstArg] = oneArgs;
+const [secondArg] = twoArgs;
 
-if (firstArg === undefined) {
-  console.log("No argument");
-} else {
-  console.log(firstArg);
-}
+const newString = firstArg.concat(' is ', secondArg);
+
+console.log(newString);
