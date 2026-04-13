@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-def assign_value(n, v):
-    n = v
-
-l1 = [1, 2, 3]
-l2 = [4, 5, 6]
-assign_value(l1, l2)
-print(l1)
+with open("0-answer.txt", "r") as f:
+    line_count = len(f.readlines())
+    print(line_count)
