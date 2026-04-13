@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
-with open("0-answer.txt", "r") as f:
-    line_count = len(f.readlines())
-    print(line_count)
+a = (1, 2)
+b = (1, 2)
+print(a is b)
